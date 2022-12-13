@@ -1,0 +1,19 @@
+.card:hover{
+    cursor: pointer;
+    border-color: #461d7c;
+    border-width: 2px
+}
+
+.card:hover h2{
+    color:#FDD023
+}
+
+.card h2{
+    color:#461d7c
+}
+
+.card img{
+    width:75%; 
+    margin: 0 auto; 
+    display: flex;
+}

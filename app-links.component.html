@@ -1,0 +1,16 @@
+<div *ngIf="loading" style="display: grid; grid-template-columns: repeat(5,1fr);">
+    <mat-card *ngFor="let item of urls" class="card" >
+        <ngx-skeleton-loader appearance="line"></ngx-skeleton-loader>
+        <ngx-skeleton-loader [theme]="{'width.%': 100,'padding-bottom.%': 100, 'height.px': 0}" appearance="circle"></ngx-skeleton-loader>
+        <ngx-skeleton-loader appearance="line"></ngx-skeleton-loader>
+        <ngx-skeleton-loader appearance="line"></ngx-skeleton-loader>
+    </mat-card>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(5,1fr);">
+    <mat-card *ngFor="let item of links" (click)="navigateToURL(item.requestUrl)" class="card">
+        <h2 class="CardTitle">{{item["ogTitle"]}}</h2>
+        <img src="{{item.ogImage.url}}"/>
+        <mat-card-content>{{item["ogDescription"]}}</mat-card-content>
+    </mat-card>
+</div>
